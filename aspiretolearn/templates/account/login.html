@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+				<form action="{% url 'login' %}" method="post">{% csrf_token %}
+					<div class="row">
+						{{form}}
+						<div class="col-12">
+							<input type="submit" value="Submit" class="btn btn-primary">
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div> <!-- /.untree_co-section -->
+
+	<!-- End retroy layout blog posts -->
+{% endblock content %}

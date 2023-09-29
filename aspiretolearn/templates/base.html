@@ -1,0 +1,19 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+    {% include 'css.html' %}
+<body>
+    {% include 'header.html' %}
+    {% block content %}{% endblock %}
+	{% include 'footer.html' %}
+    <!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+    	<div class="spinner-border text-primary" role="status">
+    		<span class="visually-hidden">Loading...</span>
+    	</div>
+    </div>
+    {% include 'js.html' %}
+  </body>
+  </html>

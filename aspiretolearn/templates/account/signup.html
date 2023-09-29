@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+				<form action="{% url 'blogs:sign_up' %}" method="post">{% csrf_token %}
+					{% if form.errors %}
+					{{form.errors}}
+					{% endif %}
+					<div class="row">
+						{{form}}
+						<div class="col-12">
+							<input type="submit" value="Submit" class="btn btn-primary">
+							<a href=""><input type="submit" value="Google" class="btn"></a>
+							<a href=""><input type="submit" value="LinkedIn" class="btn"></a>
+							<a href=""><input type="submit" value="Facebook" class="btn"></a>
+							<a href=""><input type="submit" value="Twitter" class="btn"></a>
+						</div>
+						<!-- <div class="col-6">
+							<input type="submit" value="Twitter" class="btn">
+						</div> -->
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div> 
+
+
+{% endblock content %}
